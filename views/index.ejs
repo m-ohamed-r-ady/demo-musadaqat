@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Musadaqat is a secure digital confirmation and audit platform for verifiable confirmations from request to signed record.">
+  <title>Musadaqat | Digital Confirmation &amp; Audit Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+
+<a class="sr" href="#story">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Musadaqat home">
+      <img class="lg lg-l" src="/assets/asset-1.png" alt="Musadaqat مصادقات" width="132" height="30">
+     <img class="lg lg-d"  src="/assets/asset-2.png" alt="" aria-hidden="true" width="132" height="30"></a>
+    <nav aria-label="Primary">
+      <a href="#story">Workflow</a><a href="#product">Platform</a><a href="#models">Request models</a><a href="#tracking">Tracking</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-p" href="#contact">Request a demo<svg class="arr" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="ledger" id="ledger" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">Digital Confirmation &amp; Audit Platform</p>
+      <h1><span>Trusted confirmation.</span><span class="m">Made simple.</span></h1>
+      <p class="ar" lang="ar">مصادقة موثوقة. بكل بساطة.</p>
+      <p class="lede">Secure, controlled and verifiable audit confirmations, from the first request to the signed record.</p>
+      <div class="cta-row">
+        <a class="btn btn-p btn-lg" id="heroCta" href="#contact">Request a demo<svg class="arr" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+        <a class="btn btn-o btn-lg" href="#story">See how it works</a>
+        <button class="replay" id="replay" type="button"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a6 6 0 1 0 2-4.5M4 3v3.5h3.5"/></svg>Replay</button>
+      </div>
+    </div>
+    <div class="hero-stage" id="heroStage" aria-hidden="true">
+      <div class="persp">
+        <div class="docwrap" id="heroWrap">
+          <div class="ghost paper g2" id="hg2"></div>
+          <div class="ghost paper g1" id="hg1"></div>
+          <div data-slot="doc"></div>
+        </div>
+      </div>
+      <ol class="rail" id="heroRail"><span class="fill"></span><li data-s="draft"><i></i>Draft</li><li data-s="sent"><i></i>Sent</li><li data-s="review"><i></i>In review</li><li data-s="confirmed"><i></i>Confirmed</li></ol>
+      <p class="hero-state-note" id="heroStatus" aria-live="polite">Preparing the request</p>
+    </div>
+    <p class="sr">A confirmation request for Gulf Trading Co. moves from draft to sent, is reviewed, signed by the bank and marked confirmed.</p>
+  </div>
+</section>
+
+<!-- ================= RECONCILIATION ================= -->
+<section class="story" id="story" aria-labelledby="reconciliation-title">
+  <div class="wrap recon-layout">
+    <div class="recon-copy">
+      <p class="eyebrow">Reconciliation</p>
+      <h2 class="h" id="reconciliation-title"><span>Every response.</span><span>Every decision.</span><span>Accounted for.</span></h2>
+      <p class="lede">Review the original request beside the recipient’s signed response, decision note and evidence—then preserve the full action history for the auditor.</p>
+      <dl class="recon-facts">
+        <div><dt>Responder decision</dt><dd>Confirm or reject with a recorded note</dd></div>
+        <div><dt>Supporting record</dt><dd>Signed documents and optional evidence stay attached</dd></div>
+        <div><dt>Final review</dt><dd>Confirmed responses route to the auditor for completion</dd></div>
+      </dl>
+    </div>
+
+    <div class="recon-workspace" id="reconWorkspace" data-step="0" aria-label="Illustrative reconciliation workspace">
+      <div class="recon-topbar">
+        <div><span class="recon-kicker">Review workspace</span><strong>MSQ-2026-0087</strong></div>
+        <span class="recon-sample">Illustrative record</span>
+      </div>
+      <div class="recon-switcher" role="group" aria-label="Workspace view">
+        <button type="button" aria-pressed="true" data-recon-step="0">Original request</button>
+        <button type="button" aria-pressed="false" data-recon-step="1">Recipient response</button>
+        <button type="button" aria-pressed="false" data-recon-step="2">Auditor review</button>
+      </div>
+
+      <div class="recon-records">
+        <article class="recon-record recon-request" aria-label="Original request record">
+          <header><span class="record-index">01</span><div><small>Original request</small><h3>Request document</h3></div><span class="record-state">In progress</span></header>
+          <dl class="record-meta">
+            <div><dt>Requester</dt><dd>Crescent Retail</dd></div>
+            <div><dt>Responder</dt><dd>Al Noor Distribution</dd></div>
+            <div><dt>Contact branch</dt><dd>Riyadh Branch</dd></div>
+            <div><dt>Document type</dt><dd>Trade receivable</dd></div>
+          </dl>
+          <div class="record-file"><span class="file-mark" aria-hidden="true">PDF</span><span><small>Main document</small><strong>confirmation-request.pdf</strong></span><em>Signed</em></div>
+          <div class="record-note"><small>Additional note</small><p>Please review the attached confirmation request and supporting document.</p></div>
+        </article>
+
+        <div class="recon-link" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <article class="recon-record recon-response" aria-label="Recipient response record">
+          <header><span class="record-index">02</span><div><small>Recipient response</small><h3>Decision record</h3></div><span class="record-state is-confirmed">Confirmed</span></header>
+          <dl class="record-meta">
+            <div><dt>Responder</dt><dd>Al Noor Distribution</dd></div>
+            <div><dt>Confirmation date</dt><dd>30 Jun 2026</dd></div>
+            <div><dt>Decision</dt><dd>Confirmed</dd></div>
+            <div><dt>Evidence</dt><dd>1 attachment</dd></div>
+          </dl>
+          <div class="record-file"><span class="file-mark" aria-hidden="true">PDF</span><span><small>Evidence document</small><strong>recipient-evidence.pdf</strong></span><em>Attached</em></div>
+          <div class="record-note"><small>Decision note</small><p>Reviewed and confirmed against our records. Supporting evidence is attached.</p></div>
+        </article>
+      </div>
+
+      <div class="recon-outcome" role="status" aria-live="polite">
+        <span class="outcome-mark" aria-hidden="true"></span>
+        <div><small>Ready for auditor review</small><strong>Response, evidence and action history are available together.</strong></div>
+        <span class="outcome-state">Confirmed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCT ================= -->
+<section class="product" id="product" aria-label="The platform">
+  <div class="wrap head">
+    <div>
+      <p class="eyebrow">The platform</p>
+      <h2 class="h">Every confirmation, in one ledger.</h2>
+    </div>
+    <p class="lede">The request you just followed is the top row below. Status, reference, recipient and due date for each one, with the signed record a click away.</p>
+  </div>
+  <div class="dash-wrap" id="dashWrap">
+    <div class="dash" id="dash" role="img" aria-label="Musadaqat dashboard showing confirmation requests and their statuses">
+      <aside class="side" aria-hidden="true">
+        <img class="lg-w" src="/assets/asset-2.png" alt="" width="114" height="26">
+        <small>Platform</small>
+        <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a>
+        <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Confirmations<b>18</b></a>
+        <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>New Request</a>
+        <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Organizations</a>
+        <small>Admin</small>
+        <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Reports</a>
+        <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4"/></svg>Settings</a>
+        <div class="me"><i>AN</i><span>Ahmad Nubani<em>Platform Admin</em></span></div>
+      </aside>
+      <div class="dmain" aria-hidden="true">
+        <div class="dtop"><div><h3>Dashboard</h3><p>Audit confirmation overview</p></div><a class="btn btn-p">New Request</a></div>
+        <div class="dbody">
+          <div class="stats">
+            <div class="stat" data-s="sent"><h4>Total requests</h4><b>1,284</b></div>
+            <div class="stat" data-s="review"><h4>In review</h4><b>218</b></div>
+            <div class="stat" data-s="sent"><h4>Sent</h4><b>212</b></div>
+            <div class="stat" data-s="confirmed"><h4>Confirmed</h4><b>640</b></div>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead><tr><th>Reference</th><th>Client</th><th>Type</th><th>Status</th><th>Due date</th></tr></thead>
+              <tbody>
+                <tr class="new" id="newRow"><td class="ref">MSQ-2026-0041</td><td>Gulf Trading Co.</td><td>Bank Balance</td><td><span class="pill" data-s="confirmed">Confirmed</span></td><td>Jun 24, 2026</td></tr>
+                <tr><td class="ref">MSQ-2026-0040</td><td>Al Sayer Group</td><td>Loan Balance</td><td><span class="pill" data-s="review">In Review</span></td><td>Jun 23, 2026</td></tr>
+                <tr><td class="ref">MSQ-2026-0039</td><td>Zain Telecom</td><td>LC Confirmation</td><td><span class="pill" data-s="sent">Sent</span></td><td>Jun 28, 2026</td></tr>
+                <tr><td class="ref">MSQ-2026-0038</td><td>Agility</td><td>Supplier Confirmation</td><td><span class="pill" data-s="pending">Pending</span></td><td>Jun 30, 2026</td></tr>
+                <tr><td class="ref">MSQ-2026-0037</td><td>KIPCO</td><td>Bank Balance</td><td><span class="pill" data-s="overdue">Overdue</span></td><td>Jun 12, 2026</td></tr>
+                <tr><td class="ref">MSQ-2026-0036</td><td>Americana</td><td>Loan Balance</td><td><span class="pill" data-s="rejected">Rejected</span></td><td>Jun 10, 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note wrap" style="padding-inline:0">Sample data shown for illustration.</p>
+  </div>
+</section>
+
+<!-- ================= MODELS ================= -->
+<section class="models" id="models" aria-label="Request models">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Request models</p>
+      <h2 class="h">Three ways to ask. One way to get it right.</h2>
+      <p class="lede">The platform guides auditors toward the evidence model that fits the engagement.</p>
+      <div class="tabs" role="tablist" aria-label="Confirmation models" id="tabs">
+        <button class="tab" role="tab" id="tab0" aria-controls="panel" aria-selected="true" type="button"><b>Auditor-stated balance</b><span>The auditor enters the amount. The recipient confirms it or corrects it.</span></button>
+        <button class="tab" role="tab" id="tab1" aria-controls="panel" aria-selected="false" tabindex="-1" type="button"><b>Blank confirmation</b><span>The recipient provides the balance directly from its own records.</span></button>
+        <button class="tab" role="tab" id="tab2" aria-controls="panel" aria-selected="false" tabindex="-1" type="button"><b>Attachment-based</b><span>A client-generated document is attached as subject matter, not as the request.</span></button>
+      </div>
+    </div>
+    <div class="preview" id="panel" role="tabpanel" aria-labelledby="tab0" aria-live="polite">
+      <div id="sheetHost"></div>
+      <p class="sheet-cap" id="sheetCap"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRACKING ================= -->
+<section class="tracking" id="tracking" aria-label="Tracking">
+  <div class="wrap">
+    <p class="eyebrow">Tracking</p>
+    <h2 class="h">Know where every request stands.</h2>
+    <p class="lede">Six states, each with a clear meaning. A request moves between them as recipients respond, and nothing waits unseen past its due date.</p>
+    <div class="status-explorer">
+      <div class="stations-viewport" aria-label="Request status timeline">
+        <div class="stations" id="stations">
+          <div class="status-line" aria-hidden="true"><i class="status-line-fill"></i><i class="status-signal"></i></div>
+          <button class="station" type="button" data-s="sent"><i class="sdot" aria-hidden="true"></i><b>Sent</b><span class="station-description sr">The request has gone to the recipient.</span><em class="station-count sr">212</em></button>
+          <button class="station" type="button" data-s="pending"><i class="sdot" aria-hidden="true"></i><b>Pending</b><span class="station-description sr">Waiting, still within the due date.</span><em class="station-count sr">126</em></button>
+          <button class="station" type="button" data-s="overdue"><i class="sdot" aria-hidden="true"></i><b>Overdue</b><span class="station-description sr">Past the due date. Follow-up needed.</span><em class="station-count sr">58</em></button>
+          <button class="station" type="button" data-s="review"><i class="sdot" aria-hidden="true"></i><b>In review</b><span class="station-description sr">Response received and being checked.</span><em class="station-count sr">218</em></button>
+          <button class="station" type="button" data-s="confirmed"><i class="sdot" aria-hidden="true"></i><b>Confirmed</b><span class="station-description sr">Completed, signed and on record.</span><em class="station-count sr">640</em></button>
+          <button class="station" type="button" data-s="rejected"><i class="sdot" aria-hidden="true"></i><b>Rejected</b><span class="station-description sr">Declined or disputed by the recipient.</span><em class="station-count sr">30</em></button>
+        </div>
+      </div>
+      <div class="status-detail" id="statusDetail" data-s="sent" role="status" aria-live="polite" aria-atomic="true">
+        <div class="status-detail-copy"><span>Selected status</span><h3 id="statusDetailName">Sent</h3><p id="statusDetailDescription">The request has gone to the recipient.</p></div>
+        <dl class="status-detail-data">
+          <div><dt>Requests</dt><dd id="statusDetailCount">212</dd></div>
+          <div><dt>Request reference</dt><dd>MSQ-2026-0038</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="dist">
+      <div class="dist-head"><h3>All requests this quarter</h3><strong>1,284</strong><span>Sample data</span></div>
+      <div class="dist-bar" role="img" aria-label="Distribution: 640 confirmed, 218 in review, 212 sent, 126 pending, 58 overdue, 30 rejected">
+        <i data-s="confirmed" style="width:49.8%"></i><i data-s="review" style="width:17%"></i><i data-s="sent" style="width:16.5%"></i><i data-s="pending" style="width:9.8%"></i><i data-s="overdue" style="width:4.5%"></i><i data-s="rejected" style="width:2.4%"></i>
+      </div>
+      <div class="dist-leg">
+        <span data-s="confirmed">Confirmed <b>640</b></span><span data-s="review">In review <b>218</b></span><span data-s="sent">Sent <b>212</b></span><span data-s="pending">Pending <b>126</b></span><span data-s="overdue">Overdue <b>58</b></span><span data-s="rejected">Rejected <b>30</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <p class="eyebrow">Contact us</p>
+      <h2 class="h" id="contact-title">Bring clarity to your next confirmation cycle.</h2>
+      <p class="lede">Tell us about your audit workflow, recipient volume, or integration needs. Our team will respond with the right next step.</p>
+      <div class="contact-details">
+        <div><span>Direct email</span><a href="mailto:<%= contactEmail %>"><%= contactEmail %></a></div>
+        <div><span>Typical response</span><strong>Within one business day</strong></div>
+      </div>
+      <p class="contact-note">Your message is sent securely to the Musadaqat team.</p>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+          <span class="field-error" id="nameError"></span>
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <span class="field-error" id="emailError"></span>
+        </div>
+        <div class="field">
+          <label for="organization">Organization <span>Optional</span></label>
+          <input id="organization" name="organization" type="text" autocomplete="organization" maxlength="120">
+          <span class="field-error" id="organizationError"></span>
+        </div>
+        <div class="field">
+          <label for="subject">How can we help?</label>
+          <select id="subject" name="subject" required>
+            <option value="">Choose an enquiry</option>
+            <option>Request a demo</option>
+            <option>Partnership</option>
+            <option>Support</option>
+            <option>General enquiry</option>
+          </select>
+          <span class="field-error" id="subjectError"></span>
+        </div>
+        <div class="field field-wide">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" minlength="20" maxlength="3000" placeholder="Share your confirmation workflow, timeline, or question." required></textarea>
+          <span class="field-error" id="messageError"></span>
+        </div>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <input id="startedAt" name="startedAt" type="hidden">
+      <div class="form-actions">
+        <button class="btn btn-p btn-lg" id="contactSubmit" type="submit">Send message<svg class="arr" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="#top" aria-label="Musadaqat"><img class="lg lg-l" src="/assets/asset-1.png" alt="Musadaqat مصادقات" width="115" height="26"><img class="lg lg-d" src="/assets/asset-2.png" alt="" aria-hidden="true" width="115" height="26"></a>
+    <p>Digital Confirmation &amp; Audit Platform</p>
+    <p>© 2026 Musadaqat</p>
+  </div>
+</footer>
+
+<!-- hero document component -->
+<template id="heroDocTpl">
+  <article class="doc paper" data-st="draft">
+    <div class="doc-head" data-r><div class="lh"><span class="lh-mark"></span><span class="lh-name">Auditor letterhead</span></div><span class="pill" data-s="draft" data-badge>Draft</span></div>
+    <div class="doc-title" data-r><b>Audit confirmation request</b><span class="ar" lang="ar" dir="rtl">طلب مصادقة رصيد</span></div>
+    <dl class="meta">
+      <div data-r><dt>Reference</dt><dd class="ref">MSQ-2026-0041</dd></div>
+      <div data-r><dt>Client</dt><dd>Gulf Trading Co.</dd></div>
+      <div data-r><dt>Type</dt><dd>Bank Balance</dd></div>
+      <div data-r><dt>Recipient</dt><dd>ABC Bank</dd></div>
+    </dl>
+    <p class="doc-body" data-r>Please confirm directly to our auditors the balance held for the client named above as at 31 May 2026, or note any difference.</p>
+    <div class="bal" data-r><i class="hl"></i><span>Balance per client records</span><b>﷼ 2,450,000.000</b></div>
+    <div class="resp" data-r><span><i class="chk"></i>Balance is correct</span><span><i class="chk"></i>Difference noted</span></div>
+    <div class="sign" data-r="fade">
+      <div class="sign-box">
+        <i class="sa"></i><span class="sign-hint">Sign here</span>
+        <svg class="sigsvg" viewBox="0 0 220 70" aria-hidden="true">
+          <path class="s1" d="M10 50 C16 22 30 10 36 22 C42 36 24 56 34 56 C46 56 50 28 60 30 C68 32 58 50 68 48 C80 46 80 30 90 32 C98 34 90 48 100 46 C114 43 116 26 126 30 C134 33 128 48 140 44 C152 40 160 34 176 36 C190 38 200 34 212 28"/>
+          <path class="s2" d="M24 60 C70 66 140 64 206 50"/>
+          <g class="pen"><g transform="rotate(35) scale(1.25)"><path d="M0 0 L-2.4 -8 L2.4 -8 Z" fill="#8E8D86"/><rect x="-3" y="-52" width="6" height="45" rx="3" fill="#2C2C2A"/><rect x="-3" y="-32" width="6" height="3.8" fill="#6680FF"/><rect x="-3" y="-44" width="6" height="1.8" fill="#7209B7"/></g></g>
+        </svg>
+        <img class="qrmark" src="/assets/asset-3.svg" alt="QR verification code" width="62" height="62">
+      </div>
+      <div class="sign-cap"><span>Authorised signatory</span><span>ABC Bank</span></div>
+    </div>
+    <div class="doc-foot"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M6.5 10.3l2.4 2.4 4.6-5"/></svg>Verified · SHA-256 7F3A…C91E · 5 audit events</div>
+    <div class="seal"><svg viewBox="0 0 48 48"><circle class="fill" cx="24" cy="24" r="21"/><circle class="ring" cx="24" cy="24" r="21" transform="rotate(-90 24 24)"/><path class="tick" d="M14 25 l7 7 l13 -15"/></svg></div>
+    <div class="cmt"><b>Reviewer comment</b>Please verify the recipient bank branch before sending this request.</div>
+  </article>
+</template>
+
+<script src="/js/app.js" defer></script>
+</body>
+</html>
