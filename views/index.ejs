@@ -17,8 +17,8 @@
 <header class="nav" id="nav">
   <div class="nav-in">
     <a class="brand" href="#top" aria-label="Musadaqat home">
-      <img class="lg lg-l" src="/assets/asset-1.png" alt="Musadaqat مصادقات" width="132" height="30">
-     <img class="lg lg-d"  src="/assets/asset-2.png" alt="" aria-hidden="true" width="132" height="30"></a>
+      <img class="lg lg-l" src="/assets/asset-1.png" alt="Musadaqat مصادقات" width="150" height="34">
+     <img class="lg lg-d"  src="/assets/asset-2.png" alt="" aria-hidden="true" width="150" height="34"></a>
     <nav aria-label="Primary">
       <a href="#story">Workflow</a><a href="#product">Platform</a><a href="#models">Request models</a><a href="#tracking">Tracking</a><a href="#contact">Contact</a>
     </nav>
@@ -119,6 +119,59 @@
   </div>
 </section>
 
+<!-- ================= EVIDENCE STACK ================= -->
+<section class="evidence" id="evidence" aria-labelledby="evidence-title">
+  <div class="wrap evidence-layout">
+    <div class="evidence-copy">
+      <h2 class="h" id="evidence-title">A record built in layers.</h2>
+      <p class="lede">Request data, documents, signatures and history remain connected, so the completed confirmation can be reviewed as one evidence package.</p>
+      <dl class="evidence-facts">
+        <div><dt>Request</dt><dd>The approved document and structured details establish what was sent.</dd></div>
+        <div><dt>Evidence</dt><dd>Supporting files stay attached to the response they substantiate.</dd></div>
+        <div><dt>History</dt><dd>Every decision and signature remains attributable in the final record.</dd></div>
+      </dl>
+    </div>
+
+    <figure class="evidence-visual" id="evidenceVisual" data-evidence-layer="request">
+      <div class="evidence-scene" aria-label="Exploded three-dimensional view of a confirmation evidence package">
+        <div class="evidence-glow" aria-hidden="true"></div>
+        <div class="evidence-stack" aria-hidden="true">
+          <article class="evidence-layer evidence-history" data-layer="history">
+            <div class="layer-head"><span>Action history</span><strong>5 events</strong></div>
+            <div class="history-line"><i></i><span>Request created</span><time>09:14</time></div>
+            <div class="history-line"><i></i><span>Sent to responder</span><time>09:34</time></div>
+            <div class="history-line"><i></i><span>Response confirmed</span><time>11:08</time></div>
+          </article>
+          <article class="evidence-layer evidence-signatures" data-layer="signatures">
+            <div class="layer-head"><span>Verified signatures</span><strong>2 parties</strong></div>
+            <div class="signature-pair"><span><i>RQ</i><b>Requester</b><small>Signed</small></span><span><i>RS</i><b>Responder</b><small>Signed</small></span></div>
+            <div class="signature-lock"><span></span>Identity and document version preserved</div>
+          </article>
+          <article class="evidence-layer evidence-attachments" data-layer="attachments">
+            <div class="layer-head"><span>Supporting evidence</span><strong>Attached</strong></div>
+            <div class="attachment-sheet"><i>PDF</i><span><b>recipient-evidence.pdf</b><small>Supporting document</small></span><em>1.2 MB</em></div>
+            <div class="attachment-sheet secondary"><i>PDF</i><span><b>confirmation-request.pdf</b><small>Main document</small></span><em>Signed</em></div>
+          </article>
+          <article class="evidence-layer evidence-request is-active" data-layer="request">
+            <div class="layer-head"><span>Confirmation request</span><strong>MSQ-2026-0087</strong></div>
+            <h3>Trade receivable confirmation</h3>
+            <dl><div><dt>Requester</dt><dd>Crescent Retail</dd></div><div><dt>Responder</dt><dd>Al Noor Distribution</dd></div><div><dt>As of date</dt><dd>30 Jun 2026</dd></div><div><dt>Status</dt><dd>Confirmed</dd></div></dl>
+            <div class="request-seal"><span></span><b>Verified record</b></div>
+          </article>
+        </div>
+        <div class="evidence-plinth" aria-hidden="true"><span>Musadaqat evidence package</span><b>MSQ-2026-0087</b></div>
+      </div>
+      <div class="evidence-controls" role="group" aria-label="Inspect evidence layers">
+        <button type="button" data-evidence-target="request" aria-pressed="true">Request</button>
+        <button type="button" data-evidence-target="attachments" aria-pressed="false">Evidence</button>
+        <button type="button" data-evidence-target="signatures" aria-pressed="false">Signatures</button>
+        <button type="button" data-evidence-target="history" aria-pressed="false">History</button>
+      </div>
+      <figcaption>Illustrative record using sample data</figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- ================= PRODUCT ================= -->
 <section class="product" id="product" aria-label="The platform">
   <div class="wrap head">
@@ -187,6 +240,47 @@
     <div class="preview" id="panel" role="tabpanel" aria-labelledby="tab0" aria-live="polite">
       <div id="sheetHost"></div>
       <p class="sheet-cap" id="sheetCap"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SIGNING CHAIN ================= -->
+<section class="custody" id="custody" aria-labelledby="custody-title">
+  <div class="wrap custody-layout">
+    <figure class="custody-visual" id="custodyVisual" data-custody-step="0">
+      <div class="custody-scene" aria-label="Three-dimensional signing and verification sequence">
+        <div class="custody-assembly" aria-hidden="true">
+          <div class="custody-base"><span>Signed confirmation record</span><b>MSQ-2026-0041</b></div>
+          <article class="custody-document">
+            <header><span>Audit confirmation</span><strong>CONFIRMED</strong></header>
+            <h3>Bank balance confirmation</h3>
+            <dl><div><dt>Requester</dt><dd>Verified</dd></div><div><dt>Responder</dt><dd>Verified</dd></div></dl>
+            <div class="custody-rule"></div>
+            <div class="custody-code"><img src="/assets/asset-3.svg" alt=""><span><small>Public validation</small><b>7F3A-C91E</b></span></div>
+          </article>
+          <div class="signature-token requester-token"><small>Requester</small><strong>Signed</strong><span>Document approved</span></div>
+          <div class="signature-token responder-token"><small>Responder</small><strong>Confirmed</strong><span>Evidence attached</span></div>
+          <div class="verification-plane"><span class="verification-mark"></span><div><small>Validation complete</small><strong>Record verified</strong></div></div>
+          <div class="custody-beam beam-one"></div>
+          <div class="custody-beam beam-two"></div>
+        </div>
+      </div>
+      <div class="custody-controls" role="group" aria-label="Signing sequence">
+        <button type="button" data-custody-target="0" aria-pressed="true"><span>Requester signs</span><small>Document approval</small></button>
+        <button type="button" data-custody-target="1" aria-pressed="false"><span>Responder confirms</span><small>Decision and evidence</small></button>
+        <button type="button" data-custody-target="2" aria-pressed="false"><span>Record validates</span><small>Public verification</small></button>
+      </div>
+      <figcaption>Illustrative signing sequence</figcaption>
+    </figure>
+
+    <div class="custody-copy">
+      <h2 class="h" id="custody-title">Two signatures. One verifiable record.</h2>
+      <p class="lede">Requester and responder actions converge on the same document, preserving identity, evidence and the final validation code.</p>
+      <div class="custody-points">
+        <p><strong>Signed in the browser</strong><span>Each party completes the action that belongs to its role.</span></p>
+        <p><strong>Bound to the document</strong><span>Signatures remain with the exact confirmation version they approve.</span></p>
+        <p><strong>Ready to validate</strong><span>The completed record can be checked through its verification code.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -290,7 +384,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <a href="#top" aria-label="Musadaqat"><img class="lg lg-l" src="/assets/asset-1.png" alt="Musadaqat مصادقات" width="115" height="26"><img class="lg lg-d" src="/assets/asset-2.png" alt="" aria-hidden="true" width="115" height="26"></a>
+    <a href="#top" aria-label="Musadaqat"><img class="lg lg-l" src="/assets/asset-1.png" alt="Musadaqat مصادقات" width="133" height="30"><img class="lg lg-d" src="/assets/asset-2.png" alt="" aria-hidden="true" width="133" height="30"></a>
     <p>Digital Confirmation &amp; Audit Platform</p>
     <p>© 2026 Musadaqat</p>
   </div>

@@ -243,6 +243,42 @@ new IntersectionObserver(function(entries,observer){
   observer.disconnect();
 },{threshold:.35}).observe(reconWorkspace);
 
+/* ================= EVIDENCE PACKAGE ================= */
+var evidenceVisual=$('#evidenceVisual'),evidenceLayers=$$('[data-layer]',evidenceVisual),evidenceButtons=$$('[data-evidence-target]',evidenceVisual);
+var evidenceTouched=false,evidenceTimers=[];
+function stopEvidence(){evidenceTimers.forEach(clearTimeout);evidenceTimers=[]}
+function setEvidenceLayer(name,focus){
+  evidenceVisual.setAttribute('data-evidence-layer',name);
+  evidenceLayers.forEach(function(layer){layer.classList.toggle('is-active',layer.getAttribute('data-layer')===name)});
+  evidenceButtons.forEach(function(button){
+    var active=button.getAttribute('data-evidence-target')===name;
+    button.setAttribute('aria-pressed',active?'true':'false');
+    if(active&&focus)button.focus();
+  });
+}
+evidenceButtons.forEach(function(button,index){
+  button.addEventListener('click',function(){evidenceTouched=true;stopEvidence();setEvidenceLayer(button.getAttribute('data-evidence-target'))});
+  button.addEventListener('keydown',function(event){
+    var next=-1,rtl=getComputedStyle(evidenceVisual).direction==='rtl';
+    if(event.key==='ArrowDown')next=(index+1)%evidenceButtons.length;
+    else if(event.key==='ArrowUp')next=(index+evidenceButtons.length-1)%evidenceButtons.length;
+    else if(event.key==='ArrowRight')next=(index+(rtl?-1:1)+evidenceButtons.length)%evidenceButtons.length;
+    else if(event.key==='ArrowLeft')next=(index+(rtl?1:-1)+evidenceButtons.length)%evidenceButtons.length;
+    else if(event.key==='Home')next=0;
+    else if(event.key==='End')next=evidenceButtons.length-1;
+    if(next>=0){event.preventDefault();evidenceTouched=true;stopEvidence();setEvidenceLayer(evidenceButtons[next].getAttribute('data-evidence-target'),true)}
+  });
+});
+new IntersectionObserver(function(entries,observer){
+  if(!entries[0].isIntersecting)return;
+  if(!RM&&!evidenceTouched){
+    evidenceTimers.push(setTimeout(function(){setEvidenceLayer('attachments')},650));
+    evidenceTimers.push(setTimeout(function(){setEvidenceLayer('signatures')},1350));
+    evidenceTimers.push(setTimeout(function(){setEvidenceLayer('history')},2050));
+  }
+  observer.disconnect();
+},{threshold:.3}).observe(evidenceVisual);
+
 /* ================= DASH EMERGE ================= */
 var dash=$('#dash'),dashWrap=$('#dashWrap'),newRow=$('#newRow'),flashed=false;
 function dashRender(){
@@ -267,10 +303,11 @@ addEventListener('resize',onScroll);
 dashRender();
 
 /* scrollspy */
-var links=$$('.nav nav a'),secs=['story','product','models','tracking','contact'].map(function(id){return document.getElementById(id)});
+var links=$$('.nav nav a'),navSectionMap={story:'story',evidence:'story',product:'product',models:'models',custody:'models',tracking:'tracking',contact:'contact'};
+var secs=Object.keys(navSectionMap).map(function(id){return document.getElementById(id)});
 var spy=new IntersectionObserver(function(en){
   en.forEach(function(x){
-    if(x.isIntersecting){var id=x.target.id;links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)})}
+    if(x.isIntersecting){var id=navSectionMap[x.target.id];links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)})}
   });
 },{rootMargin:'-45% 0px -50% 0px'});
 secs.forEach(function(s){spy.observe(s)});
@@ -304,6 +341,38 @@ tabs.forEach(function(t,i){
   });
 });
 showModel(0);
+
+/* ================= SIGNING CHAIN ================= */
+var custodyVisual=$('#custodyVisual'),custodyButtons=$$('[data-custody-target]',custodyVisual),custodyTouched=false,custodyTimers=[];
+function stopCustody(){custodyTimers.forEach(clearTimeout);custodyTimers=[]}
+function setCustodyStep(step,focus){
+  custodyVisual.setAttribute('data-custody-step',step);
+  custodyButtons.forEach(function(button,index){
+    button.setAttribute('aria-pressed',index===step?'true':'false');
+    if(index===step&&focus)button.focus();
+  });
+}
+custodyButtons.forEach(function(button,index){
+  button.addEventListener('click',function(){custodyTouched=true;stopCustody();setCustodyStep(index)});
+  button.addEventListener('keydown',function(event){
+    var next=-1,rtl=getComputedStyle(custodyVisual).direction==='rtl';
+    if(event.key==='ArrowDown')next=(index+1)%custodyButtons.length;
+    else if(event.key==='ArrowUp')next=(index+custodyButtons.length-1)%custodyButtons.length;
+    else if(event.key==='ArrowRight')next=(index+(rtl?-1:1)+custodyButtons.length)%custodyButtons.length;
+    else if(event.key==='ArrowLeft')next=(index+(rtl?1:-1)+custodyButtons.length)%custodyButtons.length;
+    else if(event.key==='Home')next=0;
+    else if(event.key==='End')next=custodyButtons.length-1;
+    if(next>=0){event.preventDefault();custodyTouched=true;stopCustody();setCustodyStep(next,true)}
+  });
+});
+new IntersectionObserver(function(entries,observer){
+  if(!entries[0].isIntersecting)return;
+  if(RM){setCustodyStep(2)}else if(!custodyTouched){
+    custodyTimers.push(setTimeout(function(){setCustodyStep(1)},800));
+    custodyTimers.push(setTimeout(function(){setCustodyStep(2)},1750));
+  }
+  observer.disconnect();
+},{threshold:.3}).observe(custodyVisual);
 
 /* ================= TRACKING ================= */
 var stations=$$('.station'),stationsEl=$('#stations'),stationsViewport=$('.stations-viewport'),trackingSection=$('#tracking');
